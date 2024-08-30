@@ -2,6 +2,9 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
+/**
+ * Main App creates div that contains two sub components: Header and ScoreList
+ */
 
 function App() {
   return (
@@ -13,7 +16,7 @@ function App() {
 }
 
 /**
- * This component is the Header UI
+ * This component is showing the header part
  */
 function Header() {
   return (
