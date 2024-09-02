@@ -2,9 +2,6 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 
-/**
- * Main App creates div that contains two sub components: Header and ScoreList
- */
 
 function App() {
   return (
@@ -16,7 +13,7 @@ function App() {
 }
 
 /**
- * This component is showing the header part
+ * This component is the Header UI
  */
 function Header() {
   return (
@@ -34,16 +31,24 @@ function ScoreList() {
   return (
     <div>
       <hr />
+      <PlayerScore name={'Reima'} score={35}/>
+      <PlayerScore name={'Liisa'} score={42}/>
+      <PlayerScore/>
+    </div>
+  );
+}
+
+/**
+ * This component shows one player's points
+ */
+function PlayerScore({name='John Doe', score=0}){
+  return(
+    <div>
       <h3>Name:</h3>
-      <p>Reima</p>
+      <p>{name}</p>
       <h3>Points:</h3>
-      <p>35</p>
-      <hr />
-      <h3>Name:</h3>
-      <p>Liisa</p>
-      <h3>Points:</h3>
-      <p>42</p>
-      <hr />
+      <p>{score}</p>
+      <hr/>
     </div>
   );
 }
